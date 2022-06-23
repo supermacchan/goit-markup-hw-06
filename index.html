@@ -447,6 +447,30 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form" name="modal-form">
+            <label for="name" class="modal-label">Имя</label>
+            <!-- тут будет иконка? С инпутом в один див, в один бордер?.. -->
+            <input type="text" class="modal-input" name="name" id="name" />
+          
+            <label for="tel" class="modal-label">Телефон</label>
+            <!-- тут будет иконка? С инпутом в один див, в один бордер?.. -->
+            <input type="tel" class="modal-input" name="tel" id="tel" />
+
+            <label for="email" class="modal-label">Почта</label>
+            <!-- тут будет иконка? С инпутом в один див, в один бордер?.. -->
+            <input type="email" class="modal-input" name="email" id="email" />
+          
+            <label for="comment" class="modal-label">Комментарий</label>
+            <textarea class="modal-comment" name="comment" id="comment" placeholder="Введите текст" rows="4"></textarea>
+          
+            <div class="policy-agreement">
+              <input type="checkbox" class="modal-checkbox" name="policy" id="policy">
+              <label for="policy" class="agreement">Соглашаюсь с рассылкой и принимаю <a href="" class="policy-link">Условия договора</a></label>
+            </div>
+            
+            <button type="submit" class="modal-button">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
