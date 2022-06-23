@@ -9,6 +9,7 @@
     --dark-bg-color: #2F303A;
     --icon-color: #AFB1B8;
     --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --submit-button-hover: #188CE8;
 }
 
 /* Глобальные стили */
@@ -285,7 +286,7 @@ body {
 }
 
 .third-block {
-    margin-left: 93px;
+    margin-left: auto;
 }
 
 .signup-form {
@@ -299,8 +300,15 @@ body {
 
     background-color: var(--dark-bg-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+
+    transition: border 250ms var(--time-function);
+}
+
+.signup-input:hover,
+.signup-input:focus {
+    border: 1px solid var(--main-active-color);
 }
 
 .signup-input::placeholder {
@@ -330,6 +338,13 @@ body {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
+
+    transition: background-color 250ms var(--time-function);
+}
+
+.signup-button:hover,
+.signup-button:focus {
+    background-color: var(--submit-button-hover);
 }
 
 .signup-icon {
@@ -415,7 +430,7 @@ body {
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: #188CE8;
+    background-color: var(--submit-button-hover);
 }
 
 /* Особенности */
@@ -756,14 +771,9 @@ body {
     transition: background-color 250ms var(--time-function);
 }
 
-.close-button:hover,
-.close-button:focus {
-    background-color: var(--main-active-color);
-}
-
 .close-button:hover .close-icon,
 .close-button:focus .close-icon {
-    fill: var(--dark-bg-text);
+    fill: var(--main-active-color);
 }
 
 
