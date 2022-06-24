@@ -312,7 +312,6 @@ body {
 .signup-input:hover,
 .signup-input:focus {
     border: 1px solid var(--main-active-color);
-    outline: transparent;
 }
 
 .signup-input::placeholder {
@@ -822,15 +821,11 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    cursor: pointer;
-
     transition: border 250ms var(--time-function);
 }
 
 .modal-input:focus,
-.modal-comment:focus,
-.modal-input:hover,
-.modal-comment:hover {
+.modal-comment:focus {
     border: 1px solid var(--main-active-color);
     outline: transparent;
 }
@@ -847,20 +842,7 @@ body {
     transition: fill 250ms var(--time-function);
 }
 
-.input-container:focus-within .modal-icon,
-.input-container:hover .modal-icon {
-    fill: var(--main-active-color);
-}
-
-.input-container:hover .modal-input {
-    border: 1px solid var(--main-active-color);
-}
-
-.modal-icon:hover ~ .modal-input {
-    border: 1px solid var(--main-active-color);
-}
-
-.modal-label:hover + .input-container > .modal-icon {
+.input-container:focus-within .modal-icon {
     fill: var(--main-active-color);
 }
 
@@ -873,7 +855,6 @@ body {
     border-radius: 4px;
 
     resize: none;
-    cursor: pointer;
 
     transition: border 250ms var(--time-function);
 }
@@ -931,9 +912,16 @@ body {
     visibility: visible;
     opacity: 1;
 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
+
     transition: fill 250ms var(--time-function),
     opacity 250ms var(--time-function),
     visibility 250ms var(--time-function);;
+}
+
+.empty-checkbox:focus {
+    fill: var(--main-active-color);
+    outline: transparent;
 }
 
 .filled-checkbox {
@@ -942,6 +930,7 @@ body {
     left: -24px;
 
     fill: var(--main-active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     opacity: 0;
     visibility: hidden;
@@ -963,6 +952,11 @@ body {
 .policy-link {
     color: var(--main-active-color);
     text-decoration-line: underline;
+}
+
+.policy-link:hover,
+.policy-link:focus {
+    text-decoration: none;
 }
 
 .modal-button {
